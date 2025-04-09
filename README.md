@@ -1,40 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Authapp
 
-## Getting Started
+Authapp is a Firebase Authentication-based application built using **Next.js** for the web and **React Native with Expo** for the mobile frontend. It allows users to sign in using their **Google account** and supports **push notifications** through Firebase Cloud Messaging (FCM).
 
-First, run the development server:
+---
+
+## Live Web App
+
+To access the web version of the app, open:
+
+```
+http://192.16X.XX.XX:3000
+```
+
+> Replace this IP with your **actual local IP** or deploy it online (e.g., Vercel or Netlify) to make it accessible remotely.
+
+---
+
+##Mobile App (Expo)
+
+The mobile app is built with **Expo** and embeds the web app using `react-native-webview`.
+
+### Run on Android:
+
+1. Install Expo Go from the Play Store.
+2. Clone this repo:
+   ```bash
+   git clone https://github.com/DurraniAdil/Authapp.git
+   cd Authapp
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the app:
+   ```bash
+   npx expo start --dev-client
+   ```
+5. Scan the QR code with Expo Go or run it on an emulator.
+
+
+## Features
+
+-  Google Authentication with Firebase
+-  WebView-based mobile integration
+-  Firebase Cloud Messaging (Push Notifications)
+-  Cross-platform UI using React Native + Expo
+-  Fast and responsive design
+
+---
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/)
+- [Firebase Auth](https://firebase.google.com/docs/auth)
+- [Firebase Messaging](https://firebase.google.com/docs/cloud-messaging)
+- [Expo + React Native](https://expo.dev/)
+- [React Native WebView](https://github.com/react-native-webview/react-native-webview)
+
+---
+
+## Development Setup
+
+### 1. Clone the repository:
+
+```bash
+git clone https://github.com/DurraniAdil/Authapp.git
+cd Authapp
+```
+
+### 2. Install dependencies:
+
+```bash
+npm install
+```
+
+### 3. Run the Web App (Next.js):
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> This will start the app at `http://localhost:3000` or your local IP.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### 4. Run the Mobile App (Expo):
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+npx expo start --dev-client
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Push Notifications Setup (Optional)
 
-## Learn More
+Make sure you:
+- Configure Firebase FCM in your project.
+- Use your `firebase-messaging-sw.js` for web push.
+- Enable FCM in your native app with `@react-native-firebase/messaging`.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Author
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+Made for an assingment submission by **[@DurraniAdil](https://github.com/DurraniAdil)**
+```
